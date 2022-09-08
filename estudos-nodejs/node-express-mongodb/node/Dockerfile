@@ -4,7 +4,9 @@ WORKDIR /usr/src/app
 
 COPY . .
 
-VOLUME [ "./node:/usr/src/app" ]
+#RUN  rm -R ./node_modules
+
+#RUN  npm install
 
 EXPOSE 3000
 

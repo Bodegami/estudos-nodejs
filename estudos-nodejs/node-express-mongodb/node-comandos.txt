@@ -1,0 +1,11 @@
+## COMANDOS BÁSICOS
+
+npm init -y == cria o arquivo package.json com a configuracao padrao
+
+npm install "lib" == baixa o modulo informado
+
+npm install "lib" -D == baixa o modulo informado apenas para o ambiente de desenvolvimento
+
+node "arquivo_js" == executa o arquivo informado
+
+npm run "script_do_package.json" == executa algum script pré-definido no arquivo package.json
