@@ -30,3 +30,31 @@ const random = Math.floor(Math.random(1, 10) * 100);
 
 console.log(literal);
 console.log(`Meu numero aleatorio é: ${random}`);
+
+
+// TRANSFORMACAO DO CODIGO UNICODE EM CARACTERE
+
+const cifrao = '\u0024'
+const aMaiusculo = '\u0041'
+const tique = '\u2705'
+const hiragana = '\u3041'
+
+console.log(cifrao)
+console.log(aMaiusculo)
+console.log(tique)
+console.log(hiragana)
+
+// METODOS LOWER CASE
+
+const cidade = "belo horizonte";
+const input = "Belo Horizonte";
+
+const inputMinusculo = input.toLowerCase();
+
+console.log(cidade === inputMinusculo); // true
+
+
+// METODO LENGTH
+
+const pass = "minhaSenha123"
+console.log(pass.length) // 13 caracteres
