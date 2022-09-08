@@ -5,9 +5,12 @@ const meuNumero = 3;
 const primeiroNumero = 1;
 const segundoNumero = 2;
 
+const pi = Math.PI
+
 const operacaoMatematica = primeiroNumero + segundoNumero;
 
 console.log(operacaoMatematica);
+console.log(pi);
 
 // PONTO FLUTUANTE
 
