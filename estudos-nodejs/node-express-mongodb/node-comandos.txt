@@ -1,4 +1,24 @@
+## NPM REPOSITORY
+
+http://www.npmjs.com
+
 ## COMANDOS BÁSICOS
+
+npm home == Abre a página do projeto
+
+npm repo == Abre o repositório de código do projeto
+
+npm audit == Executa uma auditoria no projeto para identificar se existe alguma dependência com vulnerabilidade conhecida
+
+npm update == Atualiza projetos para a última versão respeitando o package.json
+
+npm outdated == Retorna a lista de dependências desatualizadas mostrando a versão mais recente
+
+npm adduser == Adiciona um novo usuario no https://registry.npmjs.org para permitir a publicação de pacotes
+
+npm help <nome do comando> == retorna as informações do comando
+
+npm publish == Faz a publicação do pacote no NPM
 
 npm init -y == cria o arquivo package.json com a configuracao padrao
 
@@ -9,3 +29,17 @@ npm install "lib" -D == baixa o modulo informado apenas para o ambiente de desen
 node "arquivo_js" == executa o arquivo informado
 
 npm run "script_do_package.json" == executa algum script pré-definido no arquivo package.json
+
+
+
+
+## NPM FLAGS
+
+COMANDO   |   ATALHO   |   USO
+install	        i          Instala um novo módulo
+list	        ls	       Lista os módulos instalados
+test        	t	       Executa o script de teste especificado no package.json
+--global	   -g	       Usado como um sinalizador para instalar um pacote globalmente (não só na pasta do projeto
+--save	       -S	       Salva o módulo ao instalar
+--save-exact   -E	S      salva o módulo ao instalar, porém na versão exata mencionada
+--save-dev	   -D	       Salva o módulo ao instalar, porém como uma dependência de desenvolvimento
