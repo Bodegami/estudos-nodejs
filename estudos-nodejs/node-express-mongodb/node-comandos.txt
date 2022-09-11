@@ -2,6 +2,7 @@
 
 http://www.npmjs.com
 
+
 ## COMANDOS BÁSICOS
 
 npm home == Abre a página do projeto
@@ -43,3 +44,11 @@ test        	t	       Executa o script de teste especificado no package.json
 --save	       -S	       Salva o módulo ao instalar
 --save-exact   -E	S      salva o módulo ao instalar, porém na versão exata mencionada
 --save-dev	   -D	       Salva o módulo ao instalar, porém como uma dependência de desenvolvimento
+
+
+
+## TIPS
+
+- Express Generator é uma lib que automagicamente cria o esqueleto de uma 
+estrutura de projeto e disponibiliza uma api de hello world utilizando o express.
+
