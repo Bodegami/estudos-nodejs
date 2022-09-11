@@ -25,7 +25,7 @@
 					"response": []
 				},
 				{
-					"name": "Get Livros",
+					"name": "Busca Livros",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -44,7 +44,27 @@
 					"response": []
 				},
 				{
-					"name": "Post Livro",
+					"name": "Busca Livro pelo Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/livros/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"livros",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Adiciona Livro",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -66,6 +86,35 @@
 							"port": "3000",
 							"path": [
 								"livros"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualiza Livro",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\": \"O Bom Samaritano\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/livros/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"livros",
+								"1"
 							]
 						}
 					},
