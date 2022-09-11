@@ -119,6 +119,35 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Deleta Livro",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/livros/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"livros",
+								"1"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		}
