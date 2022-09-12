@@ -6,7 +6,7 @@ COPY . .
 
 #RUN  rm -R ./node_modules
 
-#RUN  npm install
+RUN  npm install
 
 EXPOSE 3000
 
