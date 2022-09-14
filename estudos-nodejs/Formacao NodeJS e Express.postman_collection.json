@@ -14,10 +14,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000",
+							"raw": "http://{{host}}:3000",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"{{host}}"
 							],
 							"port": "3000"
 						}
@@ -30,10 +30,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/livros",
+							"raw": "http://{{host}}:3000/livros",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"{{host}}"
 							],
 							"port": "3000",
 							"path": [
@@ -49,10 +49,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/livros/2",
+							"raw": "http://{{host}}:3000/livros/2",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"{{host}}"
 							],
 							"port": "3000",
 							"path": [
@@ -70,7 +70,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id\": 3,\r\n    \"titulo\": \"O Bom Samaritano\"\r\n}",
+							"raw": "{\r\n    \"titulo\": \"O Bom Samaritano\",\r\n    \"autor\": \"Paulo Silveira\",\r\n    \"editora\": \"Casa do código\",\r\n    \"numeroPaginas\": 150\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -78,10 +78,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/livros",
+							"raw": "http://{{host}}:3000/livros",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"{{host}}"
 							],
 							"port": "3000",
 							"path": [
@@ -106,10 +106,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/livros/1",
+							"raw": "http://{{host}}:3000/livros/1",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"{{host}}"
 							],
 							"port": "3000",
 							"path": [
@@ -135,10 +135,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/livros/1",
+							"raw": "http://{{host}}:3000/livros/1",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"{{host}}"
 							],
 							"port": "3000",
 							"path": [
