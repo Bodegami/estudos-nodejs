@@ -9,7 +9,7 @@ class LivrosController {
             if(err) {
                 res.status(500).send({message: `${err.message} - falha ao recuperar os dados..`});
             } else {
-                console.log(`${DataUtils.dataHoraAtualComTimezone()} - GET /livros executado com sucesso`)
+                console.log(`${DataUtils.dataHoraAtualComTimezone()} - GET /livros executado com sucesso!!`)
                 res.status(200).json(livros);
             }
 
@@ -23,7 +23,7 @@ class LivrosController {
             if(err) {
                 res.status(400).send({message: `${err.message} - id do livro não localizado..`})
             } else {
-                console.log(`${DataUtils.dataHoraAtualComTimezone()} - GET /livros/{id} executado com sucesso`)
+                console.log(`${DataUtils.dataHoraAtualComTimezone()} - GET /livros/{id} executado com sucesso!!`)
                 res.status(200).send(livros);
             }
 
@@ -38,7 +38,7 @@ class LivrosController {
             if(err) {
                 res.status(500).send({message: `${err.message} - falha ao cadastrar livro`});
             } else {
-                console.log(`${DataUtils.dataHoraAtualComTimezone()} - POST /livros executado com sucesso`)
+                console.log(`${DataUtils.dataHoraAtualComTimezone()} - POST /livros executado com sucesso!!`)
                 res.status(201).send(livro.toJSON());
             }
 
@@ -50,25 +50,27 @@ class LivrosController {
 
         livros.findByIdAndUpdate(id, {$set: req.body }, (err) => {
             if(!err) {
-                console.log(`${DataUtils.dataHoraAtualComTimezone()} - PUT /livros/{id} executado com sucesso.`)
+                console.log(`${DataUtils.dataHoraAtualComTimezone()} - PUT /livros/{id} executado com sucesso!!`)
                 res.status(200).send({message: `Livro atualizado com sucesso!!`})
             } else {
-                res.status(500).send({message: `${err.message} - falha ao atualizar...`})
+                res.status(500).send({message: `${err.message} - falha ao atualizar livro...`})
             }
 
         });
     };
 
+    static excluirLivro = (req, res) => {
+        const id = req.params.id;
 
-
-
-
-    static dataHoraAtual() {
-        let today = Date.now();
-        let now = new Date(today);
-        return now.toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' })
-    }
-
+        livros.findByIdAndDelete(id, (err) => {
+            if(!err) {
+                console.log(`${DataUtils.dataHoraAtualComTimezone()} - DELETE /livros/{id} executado com sucesso!!`)
+                res.status(200).send({message: `Livro removido com sucesso!!`})
+            } else {
+                res.status(400).send({message: `${err.message} - falha ao excluir livro...`})
+            }
+        });
+    };
 
 }
 
