@@ -1,7 +1,7 @@
 import livros from "../models/Livro.js";
 import DataUtils from "../utils/DataUtils.js";
 
-class LivrosController {
+class LivroController {
 
     static listarLivros = (req, res) => {
         livros.find((err, livros) => {
@@ -74,4 +74,4 @@ class LivrosController {
 
 }
 
-export default LivrosController;
+export default LivroController;

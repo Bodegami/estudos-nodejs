@@ -9,6 +9,266 @@
 			"name": "Modulo 1 - NodejS, Express e MongoDB",
 			"item": [
 				{
+					"name": "API Livros",
+					"item": [
+						{
+							"name": "Busca Livros",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://{{host}}:3000/livros",
+									"protocol": "http",
+									"host": [
+										"{{host}}"
+									],
+									"port": "3000",
+									"path": [
+										"livros"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Busca Livro pelo Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://{{host}}:3000/livros/63232fbd5b94f4f1f73e4acc",
+									"protocol": "http",
+									"host": [
+										"{{host}}"
+									],
+									"port": "3000",
+									"path": [
+										"livros",
+										"63232fbd5b94f4f1f73e4acc"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Adiciona Livro",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"titulo\": \"O Bom Samaritano\",\r\n    \"autor\": \"Paulo Silveira\",\r\n    \"editora\": \"Casa do código\",\r\n    \"numeroPaginas\": 150\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://{{host}}:3000/livros",
+									"protocol": "http",
+									"host": [
+										"{{host}}"
+									],
+									"port": "3000",
+									"path": [
+										"livros"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Atualiza Livro",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"titulo\": \"Senhor dos Aneis II\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://{{host}}:3000/livros/63232fbd5b94f4f1f73e4acc",
+									"protocol": "http",
+									"host": [
+										"{{host}}"
+									],
+									"port": "3000",
+									"path": [
+										"livros",
+										"63232fbd5b94f4f1f73e4acc"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Deleta Livro",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://{{host}}:3000/livros/63232fbd5b94f4f1f73e4acc",
+									"protocol": "http",
+									"host": [
+										"{{host}}"
+									],
+									"port": "3000",
+									"path": [
+										"livros",
+										"63232fbd5b94f4f1f73e4acc"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "API Autores",
+					"item": [
+						{
+							"name": "Busca Autores",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://{{host}}:3000/autores",
+									"protocol": "http",
+									"host": [
+										"{{host}}"
+									],
+									"port": "3000",
+									"path": [
+										"autores"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Busca Autor pelo Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://{{host}}:3000/autores/63233200b829e2fa3d0bd097",
+									"protocol": "http",
+									"host": [
+										"{{host}}"
+									],
+									"port": "3000",
+									"path": [
+										"autores",
+										"63233200b829e2fa3d0bd097"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Adiciona Autor",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nome\": \"Renato Ferreira\",\r\n    \"nacionalidade\": \"Brasileiro\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://{{host}}:3000/autores",
+									"protocol": "http",
+									"host": [
+										"{{host}}"
+									],
+									"port": "3000",
+									"path": [
+										"autores"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Atualiza Autor",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nacionalidade\": \"argentino\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://{{host}}:3000/autores/63233200b829e2fa3d0bd097",
+									"protocol": "http",
+									"host": [
+										"{{host}}"
+									],
+									"port": "3000",
+									"path": [
+										"autores",
+										"63233200b829e2fa3d0bd097"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Deleta Autor",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://{{host}}:3000/livros/63228a638aa9541c8a78cdd4",
+									"protocol": "http",
+									"host": [
+										"{{host}}"
+									],
+									"port": "3000",
+									"path": [
+										"livros",
+										"63228a638aa9541c8a78cdd4"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
 					"name": "Principal",
 					"request": {
 						"method": "GET",
@@ -20,131 +280,6 @@
 								"{{host}}"
 							],
 							"port": "3000"
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Busca Livros",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://{{host}}:3000/livros",
-							"protocol": "http",
-							"host": [
-								"{{host}}"
-							],
-							"port": "3000",
-							"path": [
-								"livros"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Busca Livro pelo Id",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://{{host}}:3000/livros/2",
-							"protocol": "http",
-							"host": [
-								"{{host}}"
-							],
-							"port": "3000",
-							"path": [
-								"livros",
-								"2"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Adiciona Livro",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"titulo\": \"O Bom Samaritano\",\r\n    \"autor\": \"Paulo Silveira\",\r\n    \"editora\": \"Casa do código\",\r\n    \"numeroPaginas\": 150\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://{{host}}:3000/livros",
-							"protocol": "http",
-							"host": [
-								"{{host}}"
-							],
-							"port": "3000",
-							"path": [
-								"livros"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Atualiza Livro",
-					"request": {
-						"method": "PUT",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"titulo\": \"O Bom Samaritano\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://{{host}}:3000/livros/1",
-							"protocol": "http",
-							"host": [
-								"{{host}}"
-							],
-							"port": "3000",
-							"path": [
-								"livros",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Deleta Livro",
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://{{host}}:3000/livros/1",
-							"protocol": "http",
-							"host": [
-								"{{host}}"
-							],
-							"port": "3000",
-							"path": [
-								"livros",
-								"1"
-							]
 						}
 					},
 					"response": []
