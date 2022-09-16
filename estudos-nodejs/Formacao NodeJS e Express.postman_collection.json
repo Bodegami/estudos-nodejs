@@ -17,12 +17,12 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://{{host}}:3000/livros",
+									"raw": "http://{{host}}:{{port}}/livros",
 									"protocol": "http",
 									"host": [
 										"{{host}}"
 									],
-									"port": "3000",
+									"port": "{{port}}",
 									"path": [
 										"livros"
 									]
@@ -36,15 +36,15 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://{{host}}:3000/livros/63232fbd5b94f4f1f73e4acc",
+									"raw": "http://{{host}}:{{port}}/livros/6323bb5b0c76cc6820afee16",
 									"protocol": "http",
 									"host": [
 										"{{host}}"
 									],
-									"port": "3000",
+									"port": "{{port}}",
 									"path": [
 										"livros",
-										"63232fbd5b94f4f1f73e4acc"
+										"6323bb5b0c76cc6820afee16"
 									]
 								}
 							},
@@ -57,7 +57,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"titulo\": \"O Bom Samaritano\",\r\n    \"autor\": \"Paulo Silveira\",\r\n    \"editora\": \"Casa do código\",\r\n    \"numeroPaginas\": 150\r\n}",
+									"raw": "{\r\n    \"titulo\": \"Javascript master\",\r\n    \"autor\": \"6323baac0c76cc6820afee0e\",\r\n    \"editora\": \"Alura\",\r\n    \"numeroPaginas\": 320\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -65,12 +65,12 @@
 									}
 								},
 								"url": {
-									"raw": "http://{{host}}:3000/livros",
+									"raw": "http://{{host}}:{{port}}/livros",
 									"protocol": "http",
 									"host": [
 										"{{host}}"
 									],
-									"port": "3000",
+									"port": "{{port}}",
 									"path": [
 										"livros"
 									]
@@ -85,7 +85,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"titulo\": \"Senhor dos Aneis II\"\r\n}",
+									"raw": "{\r\n    \"autor\": \"6323c14812a90ed9a766e3b5\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -93,15 +93,15 @@
 									}
 								},
 								"url": {
-									"raw": "http://{{host}}:3000/livros/63232fbd5b94f4f1f73e4acc",
+									"raw": "http://{{host}}:{{port}}/livros/6323c0e512a90ed9a766e3ac",
 									"protocol": "http",
 									"host": [
 										"{{host}}"
 									],
-									"port": "3000",
+									"port": "{{port}}",
 									"path": [
 										"livros",
-										"63232fbd5b94f4f1f73e4acc"
+										"6323c0e512a90ed9a766e3ac"
 									]
 								}
 							},
@@ -122,15 +122,41 @@
 									}
 								},
 								"url": {
-									"raw": "http://{{host}}:3000/livros/63232fbd5b94f4f1f73e4acc",
+									"raw": "http://{{host}}:{{port}}/livros/63232fbd5b94f4f1f73e4acc",
 									"protocol": "http",
 									"host": [
 										"{{host}}"
 									],
-									"port": "3000",
+									"port": "{{port}}",
 									"path": [
 										"livros",
 										"63232fbd5b94f4f1f73e4acc"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Busca Livro pela Editora",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://{{host}}:{{port}}/livros/busca?editora=Alura",
+									"protocol": "http",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"livros",
+										"busca"
+									],
+									"query": [
+										{
+											"key": "editora",
+											"value": "Alura"
+										}
 									]
 								}
 							},
@@ -147,12 +173,12 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://{{host}}:3000/autores",
+									"raw": "http://{{host}}:{{port}}/autores",
 									"protocol": "http",
 									"host": [
 										"{{host}}"
 									],
-									"port": "3000",
+									"port": "{{port}}",
 									"path": [
 										"autores"
 									]
@@ -166,12 +192,12 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://{{host}}:3000/autores/63233200b829e2fa3d0bd097",
+									"raw": "http://{{host}}:{{port}}/autores/63233200b829e2fa3d0bd097",
 									"protocol": "http",
 									"host": [
 										"{{host}}"
 									],
-									"port": "3000",
+									"port": "{{port}}",
 									"path": [
 										"autores",
 										"63233200b829e2fa3d0bd097"
@@ -187,7 +213,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"nome\": \"Renato Ferreira\",\r\n    \"nacionalidade\": \"Brasileiro\"\r\n}",
+									"raw": "{\r\n    \"nome\": \"Marcelo Matos\",\r\n    \"nacionalidade\": \"Brasileiro\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -195,12 +221,12 @@
 									}
 								},
 								"url": {
-									"raw": "http://{{host}}:3000/autores",
+									"raw": "http://{{host}}:{{port}}/autores",
 									"protocol": "http",
 									"host": [
 										"{{host}}"
 									],
-									"port": "3000",
+									"port": "{{port}}",
 									"path": [
 										"autores"
 									]
@@ -223,12 +249,12 @@
 									}
 								},
 								"url": {
-									"raw": "http://{{host}}:3000/autores/63233200b829e2fa3d0bd097",
+									"raw": "http://{{host}}:{{port}}/autores/63233200b829e2fa3d0bd097",
 									"protocol": "http",
 									"host": [
 										"{{host}}"
 									],
-									"port": "3000",
+									"port": "{{port}}",
 									"path": [
 										"autores",
 										"63233200b829e2fa3d0bd097"
@@ -252,15 +278,15 @@
 									}
 								},
 								"url": {
-									"raw": "http://{{host}}:3000/livros/63228a638aa9541c8a78cdd4",
+									"raw": "http://{{host}}:{{port}}/autores/63233200b829e2fa3d0bd097",
 									"protocol": "http",
 									"host": [
 										"{{host}}"
 									],
-									"port": "3000",
+									"port": "{{port}}",
 									"path": [
-										"livros",
-										"63228a638aa9541c8a78cdd4"
+										"autores",
+										"63233200b829e2fa3d0bd097"
 									]
 								}
 							},
@@ -274,12 +300,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://{{host}}:3000",
+							"raw": "http://{{host}}:{{port}}",
 							"protocol": "http",
 							"host": [
 								"{{host}}"
 							],
-							"port": "3000"
+							"port": "{{port}}"
 						}
 					},
 					"response": []
