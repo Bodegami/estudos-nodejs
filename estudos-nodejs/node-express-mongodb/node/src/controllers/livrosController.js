@@ -68,12 +68,25 @@ class LivroController {
         livros.findByIdAndDelete(id, (err) => {
             if(!err) {
                 console.log(`${DataUtils.dataHoraAtualComTimezone()} - DELETE /livros/{id} executado com sucesso!!`)
-                res.status(200).send({message: `Livro removido com sucesso!!`})
+                res.status(200).send({message: `Listar livros por executado com sucesso!!`})
             } else {
                 res.status(400).send({message: `${err.message} - falha ao excluir livro...`})
             }
         });
     };
+
+    static listarLivrosPorEditora = (req, res) => {
+        const editora = req.query.editora;
+
+        livros.find({'editora': editora}, {}, (err, livros) => {
+            if(!err) {
+                console.log(`${DataUtils.dataHoraAtualComTimezone()} - GET /livros/busca/{editora} executado com sucesso!!`)
+                res.status(200).send(livros);
+            } else {
+                res.status(400).send({message: `${err.message} - falha ao listar livros...`})
+            }
+        })
+    }
 
 }
 
